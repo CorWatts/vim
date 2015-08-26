@@ -28,3 +28,36 @@
 [submodule "vim/dotvim/bundle/vim-surround"]
 	path = vim/dotvim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/ctrlp.vim"]
+	path = bundle/ctrlp.vim
+	url = http://github.com/kien/ctrlp.vim.git
+[submodule "dotvim/bundle/ctrlp.vim"]
+	path = dotvim/bundle/ctrlp.vim
+	url = http://github.com/kien/ctrlp.vim.git
+[submodule "dotvim/bundle/nerdcommenter"]
+	path = dotvim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "dotvim/bundle/nerdtree"]
+	path = dotvim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "dotvim/bundle/quick-scope"]
+	path = dotvim/bundle/quick-scope
+	url = https://github.com/unblevable/quick-scope
+[submodule "dotvim/bundle/rainbow"]
+	path = dotvim/bundle/rainbow
+	url = https://github.com/luochen1990/rainbow.git
+[submodule "dotvim/bundle/Spacegray.vim"]
+	path = dotvim/bundle/Spacegray.vim
+	url = https://github.com/ajh17/Spacegray.vim.git
+[submodule "dotvim/bundle/syntastic"]
+	path = dotvim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "dotvim/bundle/vim-airline"]
+	path = dotvim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "dotvim/bundle/vim-css-color"]
+	path = dotvim/bundle/vim-css-color
+	url = https://github.com/ap/vim-css-color.git
+[submodule "dotvim/bundle/vim-surround"]
+	path = dotvim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
