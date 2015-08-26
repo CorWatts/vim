@@ -24,9 +24,6 @@ set t_Co=256
 set background=dark
 colorscheme spacegray
 
-" open .bix files as PHP
-au BufRead,BufNewFile *.bix set filetype=php
-
 " hit control-n to toggle NERDTree on and off
 map <silent> <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize = 40
