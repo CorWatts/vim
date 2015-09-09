@@ -17,7 +17,12 @@ this configuration will behave with older versions.
 You will want to make sure you have a 256 color terminal. Spacegray is a 256
 color Vim theme and it will look awful otherwise.
 
-## Necessary files
+## Steps
+Install the git submodules to get the Vim plugins.
+```
+git submodule init
+git submodule update
+```
 My ~/.vimrc file is in /vim/vimrc. Copy that to the correct place.
 ```bash
 cp vim/vimrc ~/.vimrc
@@ -25,11 +30,6 @@ cp vim/vimrc ~/.vimrc
 My ~/.vim directory is in /vim/dotvim. Copy that to the correct place.
 ```bash
 cp -r vim/dotvim ~/.vim
-```
-Install the git submodules to get the Vim plugins.
-```
-git submodule init
-git submodule update
 ```
 
 ## Also install
