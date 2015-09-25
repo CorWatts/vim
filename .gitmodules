@@ -61,3 +61,6 @@
 [submodule "dotvim/bundle/vim-surround"]
 	path = dotvim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "dotvim/bundle/indentLine"]
+	path = dotvim/bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine.git

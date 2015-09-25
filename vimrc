@@ -10,8 +10,12 @@ set binary noeol
 set laststatus=2
 set mouse=v
 set ff=unix
+set backspace=2
 
 set tabstop=4 shiftwidth=4 expandtab
+
+" match HTML tags with %
+runtime macros/matchit.vim
 
 execute pathogen#infect()
 call pathogen#incubate()
@@ -20,9 +24,11 @@ call pathogen#helptags()
 filetype plugin on
 filetype plugin indent on
 
-set t_Co=256
+"set t_Co=256
 set background=dark
 colorscheme spacegray
+
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " hit control-n to toggle NERDTree on and off
 map <silent> <C-n> :NERDTreeToggle<CR>
@@ -31,6 +37,9 @@ let g:NERDTreeWinSize = 40
 " Change directory to the current buffer when opening files.
 set autochdir
 
+" allow the . to execute once for each line of a visual selection
+ vnoremap . :normal .<CR>
+
 " hit control-p to toggle CtrlP plugin
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -38,8 +47,25 @@ let g:ctrlp_cmd = 'CtrlP'
 " activates rainbow.vim to color parentheses
 let g:rainbow_active = 1
 
+let g:rainbow_conf = {
+    \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+    \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+    \   'operators': '_,_',
+    \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+    \   'separately': {
+    \       '*': {},
+    \       'html': 0,
+    \       'css': 0,
+    \   }
+    \}
+
 "NERDCommenter
 let mapleader = ","
+
+"Disable tab helper on startup
+autocmd VimEnter * IndentLinesDisable
+"Toggle tab helper on or off
+noremap <Leader>t :IndentLinesToggle<CR> 
 
 " Insert into your .vimrc after quick-scope is loaded.
 " Obviously depends on <https://github.com/unblevable/quick-scope> being installed.
@@ -88,7 +114,7 @@ endif
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " bind \ (backward slash) to grep shortcut
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
 
 set statusline+=%#warningmsg#
