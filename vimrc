@@ -24,7 +24,7 @@ call pathogen#helptags()
 filetype plugin on
 filetype plugin indent on
 
-"set t_Co=256
+set t_Co=256
 set background=dark
 colorscheme spacegray
 
@@ -56,11 +56,15 @@ let g:rainbow_conf = {
     \       '*': {},
     \       'html': 0,
     \       'css': 0,
+    \       'hbs': 0,
     \   }
     \}
 
 "NERDCommenter
 let mapleader = ","
+
+"Handlebars stuff
+let g:mustache_abbreviations = 1
 
 "Disable tab helper on startup
 autocmd VimEnter * IndentLinesDisable
@@ -125,6 +129,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
 
 """"""""""""""""""""""""""""""
 " airline

@@ -64,3 +64,6 @@
 [submodule "dotvim/bundle/indentLine"]
 	path = dotvim/bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
+[submodule "dotvim/vim-mustache-handlebars"]
+	path = dotvim/vim-mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars.git
