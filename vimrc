@@ -67,7 +67,8 @@ let mapleader = ","
 let g:mustache_abbreviations = 1
 
 "Disable tab helper on startup
-autocmd VimEnter * IndentLinesDisable
+let g:indentLine_enabled = 0
+
 "Toggle tab helper on or off
 noremap <Leader>t :IndentLinesToggle<CR> 
 
