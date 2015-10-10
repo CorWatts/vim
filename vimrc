@@ -12,7 +12,49 @@ set mouse=v
 set ff=unix
 set backspace=2
 
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=2 shiftwidth=2 expandtab
+
+let mapleader = ","
+
+" ============================================================================
+" FZF {{{
+" ============================================================================
+set rtp+=/usr/local/opt/fzf
+
+if has('nvim')
+  let $FZF_DEFAULT_OPTS .= ' --inline-info'
+endif
+
+function FuzzyFind()
+  " Contains a null-byte that is stripped.
+  let gitparent=system('git rev-parse --show-toplevel')[:-2]
+  if empty(matchstr(gitparent, '^fatal:.*'))
+    silent execute ':FZF ' . gitparent
+  else
+    silent execute ':FZF .'
+  endif
+endfunction
+
+
+"nnoremap <silent> <Leader><Leader> :FZF<CR>
+nnoremap <silent> <Leader><Leader> :call FuzzyFind()<CR>
+nnoremap <silent> <Leader>C        :Colors<CR>
+nnoremap <silent> <Leader><Enter>  :Buffers<CR>
+nnoremap <silent> <Leader>ag       :Ag <C-R><C-W><CR>
+" nnoremap <silent> q: :History:<CR>
+" nnoremap <silent> q/ :History/<CR>
+
+inoremap <expr> <c-x><c-t> fzf#complete('tmuxwords.rb --all-but-current --scroll 500 --min 5')
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" }}}
 
 " match HTML tags with %
 runtime macros/matchit.vim
@@ -23,6 +65,8 @@ call pathogen#helptags()
 
 filetype plugin on
 filetype plugin indent on
+
+:let g:PHP_vintage_case_default_indent = 1
 
 set t_Co=256
 set background=dark
@@ -59,9 +103,6 @@ let g:rainbow_conf = {
     \       'hbs': 0,
     \   }
     \}
-
-"NERDCommenter
-let mapleader = ","
 
 "Handlebars stuff
 let g:mustache_abbreviations = 1

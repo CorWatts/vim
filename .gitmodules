@@ -70,3 +70,12 @@
 [submodule "dotvim/bundle/vim-fugitive"]
 	path = dotvim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "dotvim/bundle/tabular"]
+	path = dotvim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "dotvim/bundle/PHP-Indenting-for-VIm"]
+	path = dotvim/bundle/PHP-Indenting-for-VIm
+	url = https://github.com/2072/PHP-Indenting-for-VIm.git
+[submodule "dotvim/bundle/fzf.vim"]
+	path = dotvim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
