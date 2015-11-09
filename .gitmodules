@@ -79,3 +79,6 @@
 [submodule "dotvim/bundle/fzf.vim"]
 	path = dotvim/bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "dotvim/bundle/vim-windowswap"]
+	path = dotvim/bundle/vim-windowswap
+	url = https://github.com/wesQ3/vim-windowswap

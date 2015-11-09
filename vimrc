@@ -35,12 +35,22 @@ function FuzzyFind()
   endif
 endfunction
 
+command! FZFMix call fzf#run({
+            \'source':  'bash -c "'.
+            \               'echo -e \"'.join(v:oldfiles, '\n').'\";'.
+            \               'ag -l -g \"\"'.
+            \           '"',
+            \'sink' : 'e ',
+            \'dir' : g:projectroot,
+            \'options' : '-e -m --reverse',
+            \'window' : 'enew',
+            \})
+
 
 "nnoremap <silent> <Leader><Leader> :FZF<CR>
 nnoremap <silent> <Leader><Leader> :call FuzzyFind()<CR>
 nnoremap <silent> <Leader>C        :Colors<CR>
 nnoremap <silent> <Leader><Enter>  :Buffers<CR>
-nnoremap <silent> <Leader>ag       :Ag <C-R><C-W><CR>
 " nnoremap <silent> q: :History:<CR>
 " nnoremap <silent> q/ :History/<CR>
 
@@ -58,6 +68,9 @@ omap <leader><tab> <plug>(fzf-maps-o)
 
 " match HTML tags with %
 runtime macros/matchit.vim
+
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 execute pathogen#infect()
 call pathogen#incubate()
@@ -144,6 +157,12 @@ vnoremap <expr> <silent> F Quick_scope_selective('F')
 vnoremap <expr> <silent> t Quick_scope_selective('t')
 vnoremap <expr> <silent> T Quick_scope_selective('T')
 
+" Window Swap
+let g:windowswap_map_keys = 0 "prevent default bindings
+nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
+
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
@@ -161,7 +180,7 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " bind \ (backward slash) to grep shortcut
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap \ :Ag<SPACE>
+nnoremap \ :Ag <C-R><C-W><CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
