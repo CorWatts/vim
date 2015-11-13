@@ -66,6 +66,9 @@ omap <leader><tab> <plug>(fzf-maps-o)
 
 " }}}
 
+" i to insert, ii to escape insert
+imap ii <Esc>
+
 " match HTML tags with %
 runtime macros/matchit.vim
 
@@ -116,6 +119,9 @@ let g:rainbow_conf = {
     \       'hbs': 0,
     \   }
     \}
+
+" type _debug in insert mode to insert full error reporting block for PHP
+iab _debug error_reporting(E_ALL);<CR><BS><CR>ini_set('display_errors', 1);
 
 "Handlebars stuff
 let g:mustache_abbreviations = 1
