@@ -69,6 +69,12 @@ omap <leader><tab> <plug>(fzf-maps-o)
 " i to insert, ii to escape insert
 imap ii <Esc>
 
+" easy window movements
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
 " match HTML tags with %
 runtime macros/matchit.vim
 
