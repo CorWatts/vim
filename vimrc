@@ -202,7 +202,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['php'],'passive_filetypes': ['javascript'] }
 let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
+
+" enable syntastic with ,se
+noremap <Leader>se :SyntasticCheck<CR>
+" disable syntastic with ,se
+noremap <Leader>sd :SyntasticToggleMode<CR>
 
 """"""""""""""""""""""""""""""
 " airline
