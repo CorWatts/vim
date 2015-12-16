@@ -82,3 +82,6 @@
 [submodule "dotvim/bundle/vim-windowswap"]
 	path = dotvim/bundle/vim-windowswap
 	url = https://github.com/wesQ3/vim-windowswap
+[submodule "dotvim/bundle/vim-dispatch"]
+	path = dotvim/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
