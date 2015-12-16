@@ -95,6 +95,7 @@ set background=dark
 colorscheme spacegray
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd FileType make set noexpandtab
 
 " hit control-n to toggle NERDTree on and off
 map <silent> <C-n> :NERDTreeToggle<CR>
