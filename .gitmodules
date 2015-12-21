@@ -81,7 +81,7 @@
 	url = https://github.com/junegunn/fzf.vim.git
 [submodule "dotvim/bundle/vim-windowswap"]
 	path = dotvim/bundle/vim-windowswap
-	url = https://github.com/wesQ3/vim-windowswap
+	url = https://github.com/wesQ3/vim-windowswap.git
 [submodule "dotvim/bundle/vim-dispatch"]
 	path = dotvim/bundle/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
