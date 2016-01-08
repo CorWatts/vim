@@ -12,7 +12,7 @@ set mouse=v
 set ff=unix
 set backspace=2
 
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=4 shiftwidth=4 expandtab
 
 let mapleader = ","
 
@@ -66,8 +66,8 @@ omap <leader><tab> <plug>(fzf-maps-o)
 
 " }}}
 
-" i to insert, ii to escape insert
-imap ii <Esc>
+" Ctrl-f to escape insert
+inoremap <C-f> <Esc>
 
 " easy window movements
 map <C-j> <C-W>j
@@ -208,7 +208,7 @@ let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
 
 " enable syntastic with ,se
 noremap <Leader>se :SyntasticCheck<CR>
-" disable syntastic with ,se
+" disable syntastic with ,sd
 noremap <Leader>sd :SyntasticToggleMode<CR>
 
 """"""""""""""""""""""""""""""
