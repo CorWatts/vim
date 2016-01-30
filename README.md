@@ -23,13 +23,13 @@ Install the git submodules to get the Vim plugins.
 git submodule init
 git submodule update
 ```
-My ~/.vimrc file is in /vim/vimrc. Copy that to the correct place.
+My ~/.vimrc file is in /vim/vimrc. Link that to the correct place.
 ```bash
-cp vim/vimrc ~/.vimrc
+ln -s ~/.vimrc vim/vimrc
 ```
-My ~/.vim directory is in /vim/dotvim. Copy that to the correct place.
+My ~/.vim directory is in /vim/dotvim. Link that to the correct place.
 ```bash
-cp -r vim/dotvim ~/.vim
+ln -s ~/.vim vim/dotvim
 ```
 
 ## Also install
