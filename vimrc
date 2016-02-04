@@ -12,7 +12,7 @@ set mouse=v
 set ff=unix
 set backspace=2
 
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=2 shiftwidth=2 expandtab
 
 let mapleader = ","
 
@@ -105,11 +105,19 @@ let g:NERDTreeWinSize = 40
 set autochdir
 
 " allow the . to execute once for each line of a visual selection
- vnoremap . :normal .<CR>
+vnoremap . :normal .<CR>
 
 " hit control-p to toggle CtrlP plugin
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" resize windows with +/- keys
+if bufwinnr(1)
+  map + <C-W>+
+  map - <C-W>-
+  map < <C-w><
+  map > <C-w>>
+endif
 
 " activates rainbow.vim to color parentheses
 let g:rainbow_active = 1
@@ -176,6 +184,11 @@ nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
+"js beautify
+vnoremap <leader>bj :%!js-beautify -j -s 2 -q -B -f -<CR>
+vnoremap <leader>bc :%!css-beautify -j -s 2 -q -B -f -<CR>
+vnoremap <leader>bh :%!html-beautify -j -s 2 -q -B -f -<CR>
+
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
@@ -219,3 +232,5 @@ let g:airline#extensions#branch#enabled     = 1
 let g:airline#extensions#syntastic#enabled = 1
 
 syntax on
+" change visual mode highlight color to something a bit more noticeable
+hi Visual term=bold,underline cterm=bold ctermbg=8 gui=bold
