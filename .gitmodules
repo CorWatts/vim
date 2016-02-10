@@ -85,3 +85,6 @@
 [submodule "dotvim/bundle/vim-dispatch"]
 	path = dotvim/bundle/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule "dotvim/bundle/YouCompleteMe"]
+	path = dotvim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
