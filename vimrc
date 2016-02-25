@@ -119,6 +119,10 @@ if bufwinnr(1)
   map > <C-w>>
 endif
 
+" deal with vim backups
+command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+  \ | wincmd p | diffthis
+
 " activates rainbow.vim to color parentheses
 let g:rainbow_active = 1
 
@@ -189,6 +193,9 @@ nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 vnoremap <leader>bj :%!js-beautify -j -s 2 -q -B -f -<CR>
 vnoremap <leader>bc :%!css-beautify -j -s 2 -q -B -f -<CR>
 vnoremap <leader>bh :%!html-beautify -j -s 2 -q -B -f -<CR>
+nnoremap <leader>bj :%!js-beautify -j -s 2 -q -B -f -<CR>
+nnoremap <leader>bc :%!css-beautify -j -s 2 -q -B -f -<CR>
+nnoremap <leader>bh :%!html-beautify -j -s 2 -q -B -f -<CR>
 
 " The Silver Searcher
 if executable('ag')
