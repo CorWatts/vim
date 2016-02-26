@@ -88,3 +88,6 @@
 [submodule "dotvim/bundle/YouCompleteMe"]
 	path = dotvim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "dotvim/bundle/vim-airline-themes"]
+	path = dotvim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
