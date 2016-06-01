@@ -16,6 +16,9 @@ set splitright
 
 set tabstop=2 shiftwidth=2 expandtab
 
+set textwidth=80
+set colorcolumn=+1
+
 let mapleader = ","
 
 " ============================================================================
@@ -117,12 +120,12 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " resize windows with +/- keys
-if bufwinnr(1)
-  map + <C-W>+
-  map - <C-W>-
-  map < <C-w><
-  map > <C-w>>
-endif
+"if bufwinnr(1)
+  "map + <C-W>+
+  "map - <C-W>-
+  "map < <C-w><
+  "map > <C-w>>
+"endif
 
 " deal with vim backups
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
