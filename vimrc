@@ -147,9 +147,10 @@ let g:rainbow_conf = {
     \   }
     \}
 
-" type _debug in insert mode to insert full error reporting block for PHP
-iab _debug error_reporting(E_ALL);<CR><BS><CR>ini_set('display_errors', 1);
-iab dump var_dump(<CR><BS><CR>);<CR><BS><CR>exit();<Esc>kkk
+" type debug in insert mode to insert full error reporting block for PHP
+iab debug error_reporting(E_ALL);<CR><BS><CR>ini_set('display_errors', 1);
+" type dump to insert a var_dump(); exit(); block and place the cursor nicely
+iab dump var_dump();<CR>exit();<Esc>k$hi
 
 "Handlebars stuff
 let g:mustache_abbreviations = 1
