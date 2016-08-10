@@ -94,3 +94,6 @@
 [submodule "dotvim/bundle/vim-signature"]
 	path = dotvim/bundle/vim-signature
 	url = https://github.com/kshenoy/vim-signature.git
+[submodule "dotvim/bundle/tagbar"]
+	path = dotvim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git

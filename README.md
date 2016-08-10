@@ -17,8 +17,7 @@ color Vim theme and it will look awful otherwise.
 ## Install
 Install the git submodules to get the Vim plugins.
 ```
-git submodule init
-git submodule update
+git submodule update --init --recursive
 ```
 My ~/.vimrc file is in vim/vimrc. Link that to the correct place.
 ```bash
@@ -39,3 +38,9 @@ alternative to grep/fgrep/ack.
 You'll also need [fzf](https://github.com/junegunn/fzf).
 
 For the syntax completion with YouCompleteMe, be sure to compile the plugin. `cd` into dotvim/bundle/YouCompleteMe and `./install.py`
+
+## To update the plugins
+To update your plugins down the road, run this again:
+```
+git submodule update --init --recursive
+```

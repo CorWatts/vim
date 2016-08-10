@@ -207,6 +207,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['php'],'passive_filetypes': ['javascript'] }
 let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
+let g:syntastic_php_checkers = ['php']
 
 " enable syntastic with ,se
 noremap <Leader>se :SyntasticCheck<CR>
