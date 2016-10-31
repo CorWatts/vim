@@ -21,11 +21,11 @@ git submodule update --init --recursive
 ```
 My ~/.vimrc file is in vim/vimrc. Link that to the correct place.
 ```bash
-ln -s ~/.vimrc vim/vimrc
+ln -s vim/vimrc ~/.vimrc
 ```
 My ~/.vim directory is in vim/dotvim. Link that to the correct place.
 ```bash
-ln -s ~/.vim vim/dotvim
+ln -s vim/dotvim ~/.vim
 ```
 
 ## Also install
