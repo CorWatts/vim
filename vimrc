@@ -16,7 +16,7 @@ set splitright
 
 set tabstop=2 shiftwidth=2 expandtab
 
-set textwidth=80
+"set textwidth=80
 set colorcolumn=+1
 
 let mapleader = ","
@@ -151,6 +151,8 @@ let g:rainbow_conf = {
 iab debug error_reporting(E_ALL);<CR><BS><CR>ini_set('display_errors', 1);
 " type dump to insert a var_dump(); exit(); block and place the cursor nicely
 iab dump var_dump();<CR>exit();<Esc>k$hi
+" type export to insert a print '<pre>'; var_export(); print '</pre>'; exit(); block and place the cursor nicely
+iab export print "<pre>";<CR>var_export();<CR>print "</pre>";<CR>exit();<Esc>kk$hi
 
 "Handlebars stuff
 let g:mustache_abbreviations = 1
